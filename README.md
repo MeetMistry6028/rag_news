@@ -1,4 +1,5 @@
 # rag_news
+<<<<<<< HEAD
 
 An enterprise-grade Retrieval-Augmented Generation platform built on 300,000+ real-world news articles.
 
@@ -28,3 +29,5 @@ cp .env.example .env  # add your OpenAI key
 
 ## Run
 uvicorn api.main:app --reload
+=======
+>>>>>>> 11711fdc460bfacef9d8387f600176cbc08f6f88
