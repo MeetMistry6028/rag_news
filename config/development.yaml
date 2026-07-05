@@ -1,0 +1,5 @@
+logging:
+  level: DEBUG
+
+vector_store:
+  collection_name: rag_news_dev

@@ -1,0 +1,36 @@
+app:
+  name: rag_news
+  version: "0.1.0"
+  environment: development
+
+logging:
+  level: INFO
+  format: json
+  log_file: logs/app.log
+
+embedding:
+  model: text-embedding-3-small
+  batch_size: 100
+  dimensions: 1536
+
+chunking:
+  strategy: recursive
+  chunk_size: 512
+  chunk_overlap: 64
+
+vector_store:
+  provider: qdrant
+  host: localhost
+  port: 6333
+  collection_name: rag_news_articles
+
+llm:
+  provider: openai
+  model: gpt-4o-mini
+  temperature: 0.2
+  max_tokens: 1024
+
+retrieval:
+  top_k: 5
+  score_threshold: 0.5
+  enable_reranking: false

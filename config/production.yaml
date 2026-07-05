@@ -1,0 +1,5 @@
+logging:
+  level: WARNING
+
+vector_store:
+  collection_name: rag_news_prod
