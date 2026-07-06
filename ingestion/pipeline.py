@@ -5,6 +5,7 @@ from ingestion.cleaner import clean_article
 from ingestion.validator import validate_and_clean
 from ingestion.chunker import chunk_article
 from ingestion.embedder import Embedder
+from ingestion.embedder_factory import get_embedder
 from ingestion.deduplicator import Deduplicator
 from ingestion.vector_store import VectorStore
 
@@ -24,7 +25,7 @@ def run_pipeline(csv_path: str, limit: int = None):
     """
     logger.info("Starting ingestion pipeline", csv_path=csv_path, limit=limit)
 
-    embedder = Embedder()
+    embedder = get_embedder() 
     deduplicator = Deduplicator()
     vector_store = VectorStore()
 

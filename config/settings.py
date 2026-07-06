@@ -47,6 +47,7 @@ class Settings(BaseSettings):
     log_format: str = "json"
     log_file: str = "logs/app.log"
 
+    embedding_provider: str = "local"
     embedding_model: str = "text-embedding-3-small"
     embedding_batch_size: int = 100
     embedding_dimensions: int = 1536
@@ -94,6 +95,7 @@ def _extract_known_fields(yaml_config: dict) -> dict:
         "log_format":             get(c, "logging", "format"),
         "log_file":               get(c, "logging", "log_file"),
         "embedding_model":        get(c, "embedding", "model"),
+        "embedding_provider":     get(c, "embedding", "provider"),
         "embedding_batch_size":   get(c, "embedding", "batch_size"),
         "embedding_dimensions":   get(c, "embedding", "dimensions"),
         "chunking_strategy":      get(c, "chunking", "strategy"),
