@@ -60,7 +60,9 @@ class Settings(BaseSettings):
     qdrant_port: int = 6333
     collection_name: str = "rag_news_articles"
 
-    llm_model: str = "gpt-4o-mini"
+    llm_provider: str = "ollama"
+    llm_base_url: str = "http://localhost:11434"
+    llm_model: str = "llama3.2"
     llm_temperature: float = 0.2
     llm_max_tokens: int = 1024
 
@@ -104,6 +106,8 @@ def _extract_known_fields(yaml_config: dict) -> dict:
         "qdrant_host":            get(c, "vector_store", "host"),
         "qdrant_port":            get(c, "vector_store", "port"),
         "collection_name":        get(c, "vector_store", "collection_name"),
+        "llm_provider": get(c, "llm", "provider"),
+        "llm_base_url": get(c, "llm", "base_url"),
         "llm_model":              get(c, "llm", "model"),
         "llm_temperature":        get(c, "llm", "temperature"),
         "llm_max_tokens":         get(c, "llm", "max_tokens"),

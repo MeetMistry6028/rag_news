@@ -4,6 +4,8 @@ import sys
 from config.settings import get_settings
 
 def setup_logging() -> None:
+    logging.getLogger("httpx").setLevel(logging.WARNING)
+    logging.getLogger("httpcore").setLevel(logging.WARNING)
     settings = get_settings()
     level = getattr(logging, settings.log_level.upper(), logging.INFO)
 

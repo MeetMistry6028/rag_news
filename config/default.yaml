@@ -26,10 +26,11 @@ vector_store:
   collection_name: rag_news_articles
 
 llm:
-  provider: openai
-  model: gpt-4o-mini
+  provider: ollama
+  model: llama3.2
   temperature: 0.2
   max_tokens: 1024
+  base_url: http://localhost:11434
 
 retrieval:
   top_k: 5
