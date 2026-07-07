@@ -1,0 +1,62 @@
+[
+  {
+    "id": "q1",
+    "question": "What is happening in Egypt?",
+    "expected_topics": ["egypt", "protest", "morsy", "election"],
+    "expected_article_ids": []
+  },
+  {
+    "id": "q2",
+    "question": "What is ISIS doing in Iraq?",
+    "expected_topics": ["iraq", "isis", "islamic state", "militant"],
+    "expected_article_ids": []
+  },
+  {
+    "id": "q3",
+    "question": "What are politicians saying about Obama?",
+    "expected_topics": ["obama", "politician", "president"],
+    "expected_article_ids": []
+  },
+  {
+    "id": "q4",
+    "question": "What is happening in Syria?",
+    "expected_topics": ["syria", "conflict", "war", "refugee"],
+    "expected_article_ids": []
+  },
+  {
+    "id": "q5",
+    "question": "What are the latest sports results?",
+    "expected_topics": ["football", "soccer", "match", "game", "sport"],
+    "expected_article_ids": []
+  },
+  {
+    "id": "q6",
+    "question": "What crimes have been reported recently?",
+    "expected_topics": ["police", "arrest", "crime", "court", "murder"],
+    "expected_article_ids": []
+  },
+  {
+    "id": "q7",
+    "question": "What is happening with elections around the world?",
+    "expected_topics": ["election", "vote", "president", "government"],
+    "expected_article_ids": []
+  },
+  {
+    "id": "q8",
+    "question": "What health issues are in the news?",
+    "expected_topics": ["health", "disease", "hospital", "medical"],
+    "expected_article_ids": []
+  },
+  {
+    "id": "q9",
+    "question": "What is happening with the economy?",
+    "expected_topics": ["economy", "financial", "market", "bank", "money"],
+    "expected_article_ids": []
+  },
+  {
+    "id": "q10",
+    "question": "What environmental issues are being discussed?",
+    "expected_topics": ["environment", "climate", "pollution", "energy"],
+    "expected_article_ids": []
+  }
+]

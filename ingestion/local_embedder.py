@@ -1,3 +1,4 @@
+import torch
 import structlog
 from sentence_transformers import SentenceTransformer
 
@@ -18,8 +19,9 @@ class LocalEmbedder:
     """
 
     def __init__(self):
+        device = "cuda" if torch.cuda.is_available() else "cpu"
         logger.info("Loading local embedding model", model=MODEL_NAME)
-        self.model = SentenceTransformer(MODEL_NAME)
+        self.model = SentenceTransformer(MODEL_NAME, device=device)
         self.dimensions = 384
 
     def embed_texts(self, texts: list[str]) -> list[list[float]]:
